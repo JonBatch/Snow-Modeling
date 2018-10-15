@@ -1,0 +1,30 @@
+You will then see a terminal page in the browser.
+
+terminal-page
+
+In order to push to your connector's repository, you must have the repository downloaded (aka cloned). If you have not yet cloned the repository, type the below command into the terminal. The <repo_name> is the name of the repository for your connector. The repository names are listed at https://github.com/data-8. Once you run the below command, you will see a folder for your repository in your home directory on JupyterHub. You do not have to repeat this step again.
+
+    git clone https://github.com/data-8/<repo_name>
+For example, if your repository is called health-connector, you'd type:
+
+    git clone https://github.com/data-8/health-connector
+After this step, you should be able to see your connector's folder at https://datahub.berkeley.edu. Create, upload, or move content (Notebooks, datasets, etc.) into the folder. For more information on creating Notebooks, see this page. For more information on storing datasets, see this page. Once you have your content in the newly created connector repository folder, you can follow the steps below on the terminal to push to GitHub.
+
+    cd ~/<repo_name>
+    git status
+You should see something that lists the files you've changed or added. If your files don't show up, ensure that they are in your repo's folder.
+
+    git add -A
+    git commit -m "Update"
+    git push origin master
+If the push is successful, you should be able to go GitHub and see the newly uploaded file in the connector repo. If you run into something that looks the below error, contact us on Piazza and we will make sure you have the permissions needed.
+
+    ERROR: Permission to data-8/some-connector.git denied
+Here are the above commands, consolidated. This workflow is intended for Git beginners. Git offers many additional features that are not demonstrated in these steps.
+
+    git clone https://github.com/data-8/<repo_name>
+    cd ~/<repo_name>
+    git status
+    git add -A
+    git commit -m "Update"
+    git push origin master
